@@ -886,11 +886,14 @@ a.mobile-show {
   margin: 0 auto;
 }
 
+.logo-carousel-section2 {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
 .logo-carousel-section {
   background-color: #f5f5f5;
   padding: 50px 0;
 }
-
 .footer-area {
   background-color: #051922;
   color: #fff;
