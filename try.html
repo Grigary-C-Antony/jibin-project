@@ -34,8 +34,74 @@
 
 </head>
 <body>
-  
+    <div class="product-section mt-150 mb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="section-title">
+                        <h3><span class="orange-text">Solar</span> Power Plants</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="logo-carousel-inner1">
+                    <div >
+                        <div class="single-latest-news">
+                            <a href="single-news.html">
+                                <div class="latest-news-bg news-bg-1"></div>
+                            </a>
+                            <div class="news-text-box">
+                                <h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
+                                <p class="blog-meta">
+                                    <span class="author"><i class="fas fa-user"></i> Admin</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
+                                </p>
+                                <p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae
+                                    mattis nunc, egestas viverra eros.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="single-latest-news">
+                            <a href="single-news.html">
+                                <div class="latest-news-bg news-bg-2"></div>
+                            </a>
+                            <div class="news-text-box">
+                                <h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
+                                <p class="blog-meta">
+                                    <span class="author"><i class="fas fa-user"></i> Admin</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
+                                </p>
+                                <p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae
+                                    mattis nunc, egestas viverra eros.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    document.getElementById("humidity").innerHTML = myArr[myArr.length - 1]["Humidity"];
+                    document.getElementById("temp").innerHTML = myArr[myArr.length - 1]["Temperature"];
+                    document.getElementById("dist").innerHTML = myArr[myArr.length - 1]["Distance"];
+                    document.getElementById("flow").innerHTML = ((myArr[myArr.length - 1]["Flowmeter"]).toString()).toUpperCase();
+                    console.log(myArr);
+
+                }
+            };
+            xmlhttp.open("GET", "https://script.google.com/macros/s/AKfycbwHX3ih0sJKA-A36xeToC4chDHgXbr7sCzu1HviWSJNKKM4LsTe3qhMfg/exec", true);
+            xmlhttp.send();
+        </script>
 
     <!-- end copyright -->
     
